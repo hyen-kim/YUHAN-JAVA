@@ -6,10 +6,10 @@ public class Member {
 	//회원의 데이터로는 이름, 아이디, 패스워드, 나이
 	//데이터들을 가지는 Member 클래스 선언
 	// 필드
-	String name;
-	String id;
-	String password;
-	int age;
+	private String name;
+	private String id;
+	private String password;
+	private int age;
 	
 
 	// 위에 작성한 Member클래스에 생성자를 추가
