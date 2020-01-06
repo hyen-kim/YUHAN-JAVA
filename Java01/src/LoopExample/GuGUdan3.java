@@ -1,3 +1,5 @@
+// 구구단 예제 : 단 수 입력 후 출력 
+
 package LoopExample;
 
 import java.util.Scanner;

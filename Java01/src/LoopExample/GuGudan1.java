@@ -1,3 +1,5 @@
+// 구구단 예제 : 가로 출력
+
 package LoopExample;
 
 public class GuGudan1 {
