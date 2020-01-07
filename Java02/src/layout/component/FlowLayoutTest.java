@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 
 import layout.window.CenterWindow;
 
+
 public class FlowLayoutTest extends JFrame {
 	JButton[] buts = new JButton[10];
 

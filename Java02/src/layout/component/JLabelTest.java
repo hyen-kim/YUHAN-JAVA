@@ -9,6 +9,7 @@ import javax.swing.JLabel;
 
 import layout.window.CenterWindow;
 
+
 public class JLabelTest extends JFrame {
 	JLabel lbl1, lbl2;
 	JLabel lblImg;

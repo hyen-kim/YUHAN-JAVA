@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 
 import layout.window.CenterWindow;
 
+
 public class JPanelTest extends JFrame {
 	JPanel pan1, pan2;
 	JButton[] buts = new JButton[4];
