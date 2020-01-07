@@ -27,6 +27,7 @@ public class JPanelTest extends JFrame {
 			if(i<2) {
 				pan1.add(buts[i]);
 			}
+			
 			else {
 				pan2.add(buts[i]);
 			}
