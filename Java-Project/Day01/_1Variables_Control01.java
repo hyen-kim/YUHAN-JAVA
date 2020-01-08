@@ -2,26 +2,25 @@ package Day01;
 import javax.swing.JOptionPane;
 
 /*
- * Áö¹æ, Åº¼öÈ­¹°, ´Ü¹éÁú Ä®·Î¸®ÀÇ ÇÕ°è¸¦ °è»êÇÏ´Â ÇÁ·Î±×·¥
- * -> Áö¹æ, Åº¼öÈ­¹°, ´Ü¹éÁúÀÇ ±×·¥À» Å°º¸µå ÀÔ·Â (Scanner »ç¿ë)
- * -> ÃÑ Ä®·Î¸® ±¸ÇÏ±â
- * 	Áö¹æ 1±×·¥ : 9Ä®·Î¸®
- * 	´Ü¹éÁú°ú Åº¼öÈ­¹° 1±×·¥ : 4 Ä®·Î¸®
- * 	ÃÑ Ä®·Î¸® = Áö¹æ * 9 + ´Ü¹éÁú * 4 + Åº¼öÈ­¹° * 4
- * */
+ * ì§€ë°©, íƒ„ìˆ˜í™”ë¬¼, ë‹¨ë°±ì§ˆ ì¹¼ë¡œë¦¬ì˜ í•©ê³„ë¥¼ ê³„ì‚°í•˜ëŠ” í”„ë¡œê·¸ë¨
+ * -> ì§€ë°©, íƒ„ìˆ˜í™”ë¬¼, ë‹¨ë°±ì§ˆì˜ ê·¸ë¨ì„ í‚¤ë³´ë“œ ì…ë ¥ (Scanner ì‚¬ìš©)
+ * -> ì´ ì¹¼ë¡œë¦¬ êµ¬í•˜ê¸°
+ * 	ì§€ë°© 1ê·¸ë¨ : 9ì¹¼ë¡œë¦¬
+ * 	ë‹¨ë°±ì§ˆê³¼ íƒ„ìˆ˜í™”ë¬¼ 1ê·¸ë¨ : 4 ì¹¼ë¡œë¦¬
+ * 	ì´ ì¹¼ë¡œë¦¬ = ì§€ë°© * 9 + ë‹¨ë°±ì§ˆ * 4 + íƒ„ìˆ˜í™”ë¬¼ * 4
+ */
 
 public class _1Variables_Control01 {
 
 	public static void main(String[] args) {
-		
-		int fat = Integer.parseInt(JOptionPane.showInputDialog("Áö¹æÀÇ ±×·¥À» ÀÔ·ÂÇÏ¼¼¿ä."));
-		int carbo = Integer.parseInt(JOptionPane.showInputDialog("Åº¼öÈ­¹°ÀÇ ±×·¥À» ÀÔ·ÂÇÏ¼¼¿ä."));
-		int pro = Integer.parseInt(JOptionPane.showInputDialog("´Ü¹éÁúÀÇ ±×·¥À» ÀÔ·ÂÇÏ¼¼¿ä."));
-		
-		int sum = fat * 9 + carbo * 4 + pro * 4;
-		
-		System.out.println("ÃÑ Ä®·Î¸® : " + sum + " cal");
-
-	}
-
+			
+			int fat = Integer.parseInt(JOptionPane.showInputDialog("ì§€ë°©ì˜ ê·¸ë¨ì„ ì…ë ¥í•˜ì„¸ìš”."));
+			int carbo = Integer.parseInt(JOptionPane.showInputDialog("íƒ„ìˆ˜í™”ë¬¼ì˜ ê·¸ë¨ì„ ì…ë ¥í•˜ì„¸ìš”."));
+			int pro = Integer.parseInt(JOptionPane.showInputDialog("ë‹¨ë°±ì§ˆì˜ ê·¸ë¨ì„ ì…ë ¥í•˜ì„¸ìš”."));
+			
+			int sum = fat * 9 + carbo * 4 + pro * 4;
+			
+			System.out.println("ì´ ì¹¼ë¡œë¦¬ : " + sum + " cal");
+	
+		}
 }
