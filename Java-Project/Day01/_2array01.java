@@ -6,13 +6,13 @@ public class _2array01 {
 
 	public static void main(String[] args) {
 		
-		int su = Integer.parseInt(JOptionPane.showInputDialog("¹è¿­ Å©±â¸¦ ÀÔ·ÂÇÏ¼¼¿ä."));
+		int su = Integer.parseInt(JOptionPane.showInputDialog("ë°°ì—´ í¬ê¸°ë¥¼ ì…ë ¥í•˜ì„¸ìš”."));
 		int[] array = new int[su];
 		int max = 0, min = 100;
 		
 		for (int i = 0; i < su; i++) {
 			
-			array[i] = Integer.parseInt(JOptionPane.showInputDialog((i + 1) + " ¹øÂ° °ª ÀÔ·Â"));
+			array[i] = Integer.parseInt(JOptionPane.showInputDialog((i + 1) + " ë²ˆì§¸ ê°’ ì…ë ¥"));
 			
 			if (max <= array[i]) {
 				max = array[i];

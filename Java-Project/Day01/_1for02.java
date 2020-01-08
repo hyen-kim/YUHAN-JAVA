@@ -1,6 +1,6 @@
 package Day01;
 
-// ´ÙÁß for¹® ÀÌ¿ë
+// ë‹¤ì¤‘ forë¬¸ ì´ìš©
 
 public class _1for02 {
 	public static void main(String[] args) {

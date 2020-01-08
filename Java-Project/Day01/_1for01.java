@@ -2,13 +2,13 @@ package Day01;
 
 import javax.swing.JOptionPane;
 
-/* 1ºÎÅÍ »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¼ö±îÁöÀÇ ÇÕ ±¸ÇÏ±â
- * 100À» ÀÔ·ÂÇÏ¸é 1¿¡¼­ 100±îÁöÀÇ È¦¼ö ÇÕ°ú Â¦¼ö ÇÕ°è Ãâ·Â
+/* 1ë¶€í„° ì‚¬ìš©ìê°€ ì…ë ¥í•œ ìˆ˜ê¹Œì§€ì˜ í•© êµ¬í•˜ê¸°
+ * 100ì„ ì…ë ¥í•˜ë©´ 1ì—ì„œ 100ê¹Œì§€ì˜ í™€ìˆ˜ í•©ê³¼ ì§ìˆ˜ í•©ê³„ ì¶œë ¥
  */
 
 public class _1for01 {
 	public static void main(String[] args) {
-		int suinput = Integer.parseInt(JOptionPane.showInputDialog("¼ö ÀÔ·Â"));
+		int suinput = Integer.parseInt(JOptionPane.showInputDialog("ìˆ˜ ì…ë ¥"));
 		int odd = 0, even = 0;
 		
 		for(int i = 1; i <= suinput; i++) {
@@ -19,8 +19,8 @@ public class _1for01 {
 			}
 		}
 		
-		System.out.println("È¦¼ö ÇÕ°è : " + odd);
-		System.out.println("Â¦¼ö ÇÕ°è : " + even);
+		System.out.println("í™€ìˆ˜ í•©ê³„ : " + odd);
+		System.out.println("ì§ìˆ˜ í•©ê³„ : " + even);
 
 	}
 
