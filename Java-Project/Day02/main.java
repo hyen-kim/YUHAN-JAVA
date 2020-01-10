@@ -1,45 +1,37 @@
-package Day02;
 import java.util.Scanner;
 
 public class main {
-     public static void main(String[] args) {
-    	 
-         Scanner sc1 = new Scanner(System.in);
-         Scanner sc2 = new Scanner(System.in);
-         Scanner sc3 = new Scanner(System.in);
-         Permanent pm;
-         Temporary tm;
+	  public static void main(String[] args) {
+	      Scanner sc1 = new Scanner(System.in);
+	      Scanner sc2 = new Scanner(System.in);
+	      Scanner sc3 = new Scanner(System.in);
+	      Permanent pm;
+	      Temporary tm;
 
-         System.out.println("ê³ ìš©í˜•íƒœ - ì •ê·œì§<P>, ì„ì‹œì§<T>ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
-         String cho = sc1.next();
-         if (cho.equals((String)"P")) {
-            System.out.println("ì´ë¦„, ê¸°ë³¸ê¸ˆ, ë³´ë„ˆìŠ¤ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
-            String name = sc1.next();
-            int pay = sc2.nextInt();
-            int bonus = sc3.nextInt();
-            pm = new Permanent(pay, bonus);
-            
-            System.out.println("=======================");
-            pm.setName(name);
-            System.out.println("ê³ ìš©í˜•íƒœ : ì •ê·œì§");
-            System.out.println("ì´ë¦„ : " + pm.name);
-            System.out.println("ê¸‰ì—¬ : " + pm.getPay() + "ì›");
-         }
-         else if(cho.equals((String)"T")) {
-             System.out.println("ì´ë¦„, ê¸°ë³¸ê¸ˆ, ë³´ë„ˆìŠ¤ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
-              String name = sc1.next();
-              int pay = sc2.nextInt();
-              int bonus = sc3.nextInt();
-              tm = new Temporary(pay, bonus);
-              tm.setName(name);
-              System.out.println("=======================");
-              tm.setName(name);
-              System.out.println("ê³ ìš©í˜•íƒœ : ì„ì‹œì§");
-              System.out.println("ì´ë¦„ : " + tm.name);
-              System.out.println("ê¸‰ì—¬ : " + tm.getPay() + "ì›");
-           }
-           else {
-              System.out.println("ì˜ëª»ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.");
-           }
-        }
+	      System.out.println("°í¿ëÇüÅÂ - Á¤±ÔÁ÷<P>, ÀÓ½ÃÁ÷<T>¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+	      String cho = sc1.next();
+	      System.out.println(cho);
+	      if (cho.equals((String)"P")) {
+	         System.out.println("ÀÌ¸§, ±âº»±İ, º¸³Ê½º¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+	         String name = sc1.next();
+	         int pay = sc2.nextInt();
+	         int bonus = sc3.nextInt();
+	         pm = new Permanent(pay, bonus);
+	         pm.setName(name);
+	         System.out.println(pm.name);
+	      }
+	      else if(cho.equals((String)"T")) {
+	    	 System.out.println("ÀÌ¸§, ±âº»±İ, º¸³Ê½º¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+	         String name = sc1.next();
+	         int pay = sc2.nextInt();
+	         int bonus = sc3.nextInt();
+	         tm = new Temporary(pay, bonus);
+	         tm.setName(name);
+	         System.out.println(tm.name);
+	      }
+	      else {
+	         System.out.println("¿¡·¯");
+	      }
+	   }
+
 }
