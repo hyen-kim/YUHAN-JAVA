@@ -1,40 +1,67 @@
 package Swing;
 
+import java.awt.FlowLayout;
 import java.awt.Panel;
 
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JRadioButton;
 import javax.swing.SwingConstants;
 
-public class Coffe
-{
-	JFrame frame = new JFrame("");
-	JLabel label = new JLabel("원하는 커피 선택");
-	
-	public void createFrame()
-	{
-		//프레임에 컴포넌트 추가
-		frame.add(label);
-		// label 위치 지정
-		label.setVerticalAlignment(SwingConstants.TOP);
-		label.setHorizontalAlignment(SwingConstants.CENTER);
-		frame.pack();
-		
-		//프레임 크기 지정	
-		frame.setSize(600, 400);
+public class Coffe {
+	static class setGUI extends JFrame {
 
-		//프레임 보이기
-		frame.setVisible(true);
+		// 생성자를 통해 GUI 초기 세팅을 해준다.
+		setGUI() {
+			// 윈도우 제목(Title)을 생성
+			setTitle("Coffe Test");
+			// 종료 버튼 생성
+			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		//swing에만 있는 X버튼 클릭시 종료
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+			// FlowLayout을 설정
+			this.setLayout(new FlowLayout());
+
+			// 레이블 생성
+			JLabel lb1 = new JLabel("원하는 커피 선택");
+			this.add(lb1);
+
+			// 라디오 버튼 생성
+			JRadioButton rd1 = new JRadioButton("아메리카노");
+			JRadioButton rd2 = new JRadioButton("카페모카");
+			JRadioButton rd3 = new JRadioButton("에스프레소");
+			JRadioButton rd4 = new JRadioButton("카페라떼");
+
+			// 1번 라디오 버튼 눌러져있도록
+			rd1.setSelected(true);
+			
+			// 라디오 버튼을 그룹화 하기위한 객체 생성
+			ButtonGroup groupRd = new ButtonGroup();
+
+			// 그룹에 라디오 버튼 포함시킨다.
+			groupRd.add(rd1);
+			groupRd.add(rd2);
+			groupRd.add(rd3);
+			groupRd.add(rd4);
+
+			this.add(rd1);
+			this.add(rd2);
+			this.add(rd3);
+			this.add(rd4);
+			
+			// 윈도우 창 크기 설정(가로, 세로)
+			setSize(600, 300);
+
+			// 이 메소드를 이용해야 윈도우 창이 나타난다.
+			setVisible(true);
+		}
 	}
 
-	public static void main(String[] args)
-	{
-		//프레임 열기
-		Coffe CoffeExample = new Coffe();
-		CoffeExample.createFrame();
+	public static void main(String[] args) {
+		// 프레임 열기
+		new setGUI();
 	}
 }
