@@ -29,10 +29,10 @@ public class Coffe {
 			this.add(lb1);
 
 			// 라디오 버튼 생성
-			JRadioButton rd1 = new JRadioButton("아메리카노");
-			JRadioButton rd2 = new JRadioButton("카페모카");
-			JRadioButton rd3 = new JRadioButton("에스프레소");
-			JRadioButton rd4 = new JRadioButton("카페라떼");
+			JRadioButton rd1 = new JRadioButton("아메리카노(2500)");
+			JRadioButton rd2 = new JRadioButton("카페모카(3500)");
+			JRadioButton rd3 = new JRadioButton("에스프레소(2500)");
+			JRadioButton rd4 = new JRadioButton("카페라떼(4000)");
 			
 			// 1번 라디오 버튼 눌러져있도록
 			rd1.setSelected(true);
@@ -68,7 +68,7 @@ public class Coffe {
 			this.add(s);
 			
 			// 윈도우 창 크기 설정(가로, 세로)
-			setSize(500, 300);
+			setSize(650, 300);
 
 			// 이 메소드를 이용해야 윈도우 창이 나타난다.
 			setVisible(true);
