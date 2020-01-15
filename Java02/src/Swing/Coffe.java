@@ -1,15 +1,14 @@
 package Swing;
 
 import java.awt.FlowLayout;
-import java.awt.Panel;
-
 import javax.swing.ButtonGroup;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
-import javax.swing.SwingConstants;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
 
 public class Coffe {
 	static class setGUI extends JFrame {
@@ -34,7 +33,7 @@ public class Coffe {
 			JRadioButton rd2 = new JRadioButton("카페모카");
 			JRadioButton rd3 = new JRadioButton("에스프레소");
 			JRadioButton rd4 = new JRadioButton("카페라떼");
-
+			
 			// 1번 라디오 버튼 눌러져있도록
 			rd1.setSelected(true);
 			
@@ -52,8 +51,24 @@ public class Coffe {
 			this.add(rd3);
 			this.add(rd4);
 			
+			// 레이블 생성 
+			JLabel lbcount = new JLabel("수량"); 
+			JLabel lbmoney = new JLabel("입금액"); 
+			// 텍스트 필드 생성
+			JTextField count = new JTextField( 10 );   
+			JTextField money = new JTextField( 10 );  
+			
+			this.add(lbcount);
+			this.add(count);
+			this.add(lbmoney);
+			this.add(money);
+			
+			JTextArea content= new JTextArea(7,40); 
+			JScrollPane s= new JScrollPane(content); 
+			this.add(s);
+			
 			// 윈도우 창 크기 설정(가로, 세로)
-			setSize(600, 300);
+			setSize(500, 300);
 
 			// 이 메소드를 이용해야 윈도우 창이 나타난다.
 			setVisible(true);
