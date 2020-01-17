@@ -1,0 +1,18 @@
+# 이클립스 단축키
+
+1. 새파일 : ctrl + n
+2. 한 줄 삭제 : ctrl + d
+3. 실행(run) : ctrl + f11
+4. main()메서드 자동완성 : main + ctrl + space
+			 : sys + ctrl + space
+5. 화면 확장 : ctrl + m
+6. 파일(폴더)명 변경 : f2
+7. 주석처리할 부분을 영역 지정 후,
+   주석처리 : ctrl + shift + /
+   주석해제 : ctrl + shift + \
+
+
+
+
+
+
