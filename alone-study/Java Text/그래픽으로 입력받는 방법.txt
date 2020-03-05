@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+import class1211.Sanner;
+
+public class operetorExample5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+		
+	int a = Integer.parseInt(JOptionPane.showInputDialog("A의 값을 입력해 ~ !!"));
+	int b = Integer.parseInt(JOptionPane.showInputDialog("B의 값을 입력해 ~ !!"));
+		
+		String s = "크다 ";
+		
+		s+= ++a >= b ? (a-b) + "만큼 a가.." : (b-a)+ "만큼 b가..";
+		// 어떤값을 넣냐에 따라 답이 달라진다.
+
+		System.out.println(s); // 출력문에 해당하는도구.(?)
+		//			시스템에 있는 표준장치를 통해 입력을 받겠다는 말.
+		
+	}
+
+}
+
+--------------------------------------------------------------------------
+
+package class1211;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+import javax.swing.JOptionpane;
+
+public abstract class IfExcample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+		int score = Integer.parseInt(JOptionPane.showInputDialog("너의 점수를 입력해줘"));
+		
+		
+		if(score >= 90) {
+			System.out.println("점수가 90보다 큽니다.");
+			System.out.println("등급은 A 입니다.");
+		}
+		
+		if(score < 90) {
+		System.out.println("점수가 90보다 작습니다.");
+		System.out.println("등급은 B 입니다.");
+		}
+		
+
+
+	}
+
+}

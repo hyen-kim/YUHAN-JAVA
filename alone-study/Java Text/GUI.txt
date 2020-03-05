@@ -1,0 +1,14 @@
+☆GUI Programming☆
+
+사용자에게 입력받는 법은?
+ - JOptionPane.showInputDialog();
+
+정수형으로 변환하는 법은?
+ - Integer.parseInt();
+
+실수형으로 변환하는 법은?
+ - Double.parseDouble();
+
+정보를 보여주는 법은?
+ - JOptionPane.showMessageDialog();
+
