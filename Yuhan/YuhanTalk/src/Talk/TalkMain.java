@@ -2,6 +2,7 @@ package Talk;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
@@ -42,13 +43,20 @@ public class TalkMain {
 		login.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				// 로그인 버튼 클릭 시
+				JOptionPane.showMessageDialog(null, "로그인 성공");
 				
 			}
 		});
+		
 		login.setBounds(77, 440, 414, 53);	// 로그인 버튼 위치
 		j.getContentPane().add(login);		// 로그인 버튼 추가
 		
 		JButton join = new JButton("JOIN");
+		join.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				// 회원가입 버튼 클릭 시
+			}
+		});
 		join.setForeground(new Color(255, 255, 255));
 		join.setBackground(Color.LIGHT_GRAY);
 		join.setFont(new Font("맑은 고딕", Font.BOLD, 18));
@@ -67,14 +75,12 @@ public class TalkMain {
 		title.setHorizontalAlignment(SwingConstants.CENTER);
 		title.setForeground(new Color(102, 205, 170));
 		title.setFont(new Font("휴먼둥근헤드라인", Font.BOLD, 50));
-		title.setBounds(60, 26, 414, 114);
+		title.setBounds(59, 26, 414, 114);
 		j.getContentPane().add(title);
 
 		
-		
-		
-		
 
+		
 		j.setResizable(true); // 프레임 크기 고정
 		j.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	// 종료버튼 활성화
 		j.setVisible(true);	// 창 보이기
