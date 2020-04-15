@@ -15,5 +15,6 @@ public class Gugudan3 {
 				System.out.println();
 			}
 		}
+		sc.close();
 	}
 }
