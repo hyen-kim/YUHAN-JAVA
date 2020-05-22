@@ -9,7 +9,9 @@ public class RunBookStore {
 		bs.displayBooks(); // 처음에 한번만 display
 
 		while (exit != 999) {
+
 			// 학년을 입력받는 부분
+
 			System.out.print(">> 학년을 입력하세요 : ");
 			int gradenu = sc.nextInt();
 
@@ -38,23 +40,26 @@ public class RunBookStore {
 							int money = sc.nextInt();
 							int moneysuccess = bs.payMoney(money);
 							if (moneysuccess == 0) { // 결제가 실패하였을 경우
-
+								bs.bookpayment = "결제 실패";
+							} else {
+								bs.bookpayment = "결제 성공";
 							}
 						} else { // 결제 방식이 카드 인경우
+							bs.bookpayment = "결제 성공";
 							System.out.println(">> 결제가 완료되었습니다.");
 						}
 					} else {
-						System.out.printf(">> 결제 방식을 잘못 입력하셨습니다.\n다시 한 번 입력해주세요.");
+						System.out.printf(">> 결제 방식을 잘못 입력하셨습니다.\n>> 다시 한 번 입력해주세요.\n");
 						continue;
 					}
 
 				} else {
-					System.out.printf(">> 구매하고자 하는 책이 존재하지 않습니다.\n확인 후 다시 한 번 입력해주세요.\n");
+					System.out.printf(">> 구매하고자 하는 책이 존재하지 않습니다.\n>> 확인 후 다시 한 번 입력해주세요.\n");
 					continue;
 				}
 
 			} else { // 제대로 입력하지 않았다면 다시 입력 받게
-				System.out.printf(">> 학년을 잘못입력하셨습니다.\n 다시 한 번 입력해주세요.\n");
+				System.out.printf(">> 학년을 잘못입력하셨습니다.\n>> 다시 한 번 입력해주세요.\n");
 				continue;
 			}
 			// 구매 내역 출력을 원하는지 물어보는 부분
@@ -66,8 +71,10 @@ public class RunBookStore {
 
 			System.out.print(">> 종료를 원하십니까 ? (예 : 999, 아니요 : 아무거나 입력) : ");
 			exit = sc.nextInt();
+
 		}
 		System.out.println("\n\n\n\n>> 이용해주셔서 감사합니다.");
 		sc.close();
 	}
+
 }

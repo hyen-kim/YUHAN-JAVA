@@ -13,7 +13,8 @@ public class BookStore {
 			{ 28000, 11000, 25400, 15600, 14000, 18200, 28000, 20000 } }; // 책에 따른 가격
 	int bookMoneyindex; // 선택한 책 가격
 	int paymentmethod; String pay;	// 결제방식 		
-	
+	String bookpayment = "";
+
 	// 기능
 	public int getGrade() { // 학년의 값을 반환
 		return grade;
@@ -43,11 +44,15 @@ public class BookStore {
 	public void setBookMoneyindex(int bookMoneyindex) {
 		this.bookMoneyindex = bookMoneyindex;
 	}
+	
+	public void setBookpayment(String bookpayment) {
+		this.bookpayment = bookpayment;
+	}
 
 	public void displayBooks() { // 북상점 => 학년 책 가격에 대해 알려줌
-		System.out.println("=======================================");
+		System.out.println("=========================================================");
 		System.out.println("유한대학교 ITSOFTWORE 북상점에 오신걸 환영합니다.");
-		System.out.println("=======================================");
+		System.out.println("=========================================================");
 
 		for (int i = 0; i < bookType.length; i++) {
 			System.out.println();
@@ -56,18 +61,14 @@ public class BookStore {
 				System.out.printf("%d. %s 책의 가격은 %d원 입니다.\n",j, bookType[i][j], bookMoney[i][j]);
 			}
 		}
-		System.out.println("\n=======================================");
 	}
 
 	public void gradeBooks() { // 선택한 학년의 책과 가격을 알려줌
-		System.out.println("=======================================");
+		showTest();
 		System.out.println(grade + "학년책 ");
-		System.out.println("=======================================");
-
 		for (int i = 0; i < bookType[grade-1].length; i++) {
 			System.out.printf("%d. %s 책의 가격은 %d원 입니다.\n",i, bookType[grade-1][i], bookMoney[grade-1][i]);
 		}
-		System.out.println("=======================================");
 	}
 	
 	// 책과 가격을 저장
@@ -89,7 +90,7 @@ public class BookStore {
 	// 현금으로 결제하였을 경우 
 	public int payMoney(int money) {
 		if(money > bookMoneyindex) {
-			System.out.printf(">> 구매가 완료되었습니다.\n잔돈은 %d원 입니다.\n", money-bookMoneyindex);
+			System.out.printf(">> 구매가 완료되었습니다.\n>> 잔돈은 %d원 입니다.\n", money-bookMoneyindex);
 		}else if(money < bookMoneyindex) {
 			System.out.println(">> 잔액이 부족합니다.");
 			return 0;
@@ -101,9 +102,15 @@ public class BookStore {
 	
 	// 구매한 내역
 	public void showInformation() {
+		showTest();
 		System.out.println(">> 학년 : " + grade);
 		System.out.println(">> 구매한 책 : " + book);
 		System.out.println(">> 구매한 가격 : " + bookMoneyindex + "원");
 		System.out.println(">> 결제방식 : " + pay);
+		System.out.println(">> " + bookpayment);
+	}
+	
+	public void showTest() {
+		for (int i = 0; i < 50; ++i) {System.out.println();}
 	}
 }
