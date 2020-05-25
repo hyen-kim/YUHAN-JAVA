@@ -11,7 +11,6 @@ public class RunBookStore {
 		while (exit != 999) {
 
 			// 학년을 입력받는 부분
-
 			System.out.print(">> 학년을 입력하세요 : ");
 			int gradenu = sc.nextInt();
 
