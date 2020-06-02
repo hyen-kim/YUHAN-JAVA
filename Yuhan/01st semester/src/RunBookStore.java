@@ -9,7 +9,6 @@ public class RunBookStore {
 		bs.displayBooks(); // 처음에 한번만 display
 
 		while (exit != 999) {
-
 			// 학년을 입력받는 부분
 			System.out.print(">> 학년을 입력하세요 : ");
 			int gradenu = sc.nextInt();
