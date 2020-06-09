@@ -1,0 +1,90 @@
+
+===================================================================
+
+13주차
+
+===================================================================
+
+< 배치 관리자 >
+
+* 배치 관리자
+- 컴포넌트를 배치하기 위한 방법 제공
+- BorderLayout, FlowLayout, GridLayout, CardLayout, null
+
+* 배치 관리자의 지정 방법
+- setLayout(LayoutManager);
+
+
+
+
+
+1. FlowLayout
+- 왼쪽에서 오른쪽으로, 위에서 아래 방향으로 배치
+
+컴포넌트1	컴포넌트2	컴포넌트3
+컴포넌트4	컴포넌트5	컴포넌트6
+
+* FlowLayout 지정 방법
+FlowLayout(int align, int hGap, int vGap);
+// align : FlowLayout.LEFT, FlowLayout.RIGHT, FlowLayout.CENTER 중 한 개 지정
+// hGap : 컴포넌트 사이의 수평 간격을 픽셀 단위로 지정 (기본은 5픽셀)
+// vGap : 컴포넌트 사이의 수직 간격을 픽셀 단위로 지정 (기본은 5픽셀)
+
+
+
+
+
+2. BorderLayout
+- 동(East), 서(West), 남(South), 북(North), 가운데(Center)로 구분하여 분할 배치
+- 컴포넌트간 간격이 없어 배치
+
+* BorderLayout 지정 방법
+BorderLayout(int hGap, intvGap);
+
+// hGap : 컴포넌트 사이의 수평 간격을 픽셀 단위로 지정 (기본은 5픽셀)
+// vGap : 컴포넌트 사이의 수직 간격을 픽셀 단위로 지정 (기본은 5픽셀)
+
+add("East", 컴포넌트명);	// 컴포넌트를 동쪽에 추가
+add("West", 컴포넌트명);	// 컴포넌트를 서쪽에 추가
+add("South", 컴포넌트명);	// 컴포넌트를 남쪽에 추가
+add("North", 컴포넌트명);	// 컴포넌트를 북쪽에 추가
+add("Center", 컴포넌트명);	// 컴포넌트를 가운데에 추가
+
+
+
+
+
+3. GridLayout 
+- 격자로 분할하여 배치
+- 행(row)과 열(col)의 수를 이용하여 격자 구성
+- 왼쪽에서 오른쪽으로, 위에서 아래 방향으로 배치
+
+* GridLayout 지정 방법
+GridLayout(int rows, int cols, int hGap, int vGap);
+
+// rows : 격자의 행 수 (기본은 1)
+// cols : 격자의 열 수 (기본은 1)
+// hGap : 컴포넌트 사이의 수평 간격을 픽셀 단위로 지정 (기본은 0픽셀)
+// vGap : 컴포넌트 사이의 수직 간격을 픽셀 단위로 지정 (기본은 0픽셀)
+
+
+
+
+4. null 
+
+* 배치관리자를 사용하지 않고 배치하는 방법
+// 배치관리자를 사용하지 않음을 선언
+setLayout(null);
+
+// 컴포넌트의 크기 지정
+// 가로, 세로의 크기를 픽셀로 지정
+Component.setSize(int width, int height);
+
+// 컴포넌트의 위치 지정
+// 프레임에서의 x, y 위치를 픽셀로 지정
+Component.setLocation(int x, int y);
+
+// 컴포넌트의 위치와 크기를 동시에 지정
+Component.setBounds(int x, int y, int width, int height);
+
+
