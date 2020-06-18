@@ -1,0 +1,97 @@
+
+===================================================================
+
+14주차
+
+===================================================================
+
+< 기타 컴포넌트 >
+
+* 컴포넌트 : JTextField
+- 사용자로부터 정보를 입력 받을 수 있는 칸 제공
+- 이름, 전화번호 등의 한 줄의 정보 입력 가능
+
+JTextField 컴포넌트
+JTextField Tf = new JTextField(String text, int col);
+
+
+* 컴포넌트 : JTextArea
+- 사용자로부터 정보를 입력 받을 수 있는 칸 제공
+- 게시판 내용 등의 여러 줄의 정보 입력 가능
+
+JTextArea Ta = new JTextArea(String text, int, rows, int cols);
+// text : 초기에 TextArea에 표시할 문자열
+// rows : TextArea의 열(줄)의 수
+// cols : TextArea의 행의 수
+
+
+--> 둘의 공통점은 사용자로부터 입력 받을 수 있다는 점이고
+    차이점은 TextField는 한줄, TextArea은 여러줄 이라는 차이점 존재
+
+
+
+
+
+
+
+* 컴포넌트 : JCheckBox 
+- 여러 개의 항목 중 특정 항목 선택
+- 중복 선택 가능
+
+JCheckBox 컴포넌트
+JCheckBox Cb = new JCheckBox(String text, boolean selected);
+// text : 체크박스에 표시할 문자열
+// selected : true 이면 초기에 선택 상태로 생성
+
+
+* 컴포넌트 : JRadioButton
+- 여러 개의 항목 중 특정 항목 선택
+- 중복 선택 불가능
+
+JRadioButton 컴포넌트
+// 라디오버튼 그룹 생성
+ButtonGroup grp = new ButtonGroup();
+
+// 라디오버튼 생성
+JRadioButton Rb1 = new JRadioButton(String text, boolean selected);
+JRadioButton Rb2 = new JRadioButton(String text, boolean selected);
+// text : 라디오버튼에 표시할 문자열
+// selected : true 이면 초기에 선택 상태로 생성
+
+// 라디오버튼 그룹에 추가
+grp.add(Rb1);
+grp.add(Rb2);
+
+
+--> 체크박스는 중복선택이 가능하지만, 라디오버튼은 중복선택이 불가능하다는 차이점 존재
+
+
+
+
+
+
+
+* 컴포넌트 : JList 
+- 여러 개의 항목 중에서 특정 항목 선택 : 펼침 목록
+- 중복 선택 가능
+
+JList 컴포넌트
+String[] DataList = {"항목1", "항목2", ...};
+JList Lt = new JList(String [] DataList);
+// DataList : 항목들의 이름이 저장되어 있는 배열 이름
+
+
+
+
+
+
+
+* 컴포넌트 : JComboBox
+- 여러 개의 항목 중에서 특정 항목 선택
+- 버튼을 클릭해야 목록 보임
+
+JComboBox 컴포넌트
+String [] DataList = {"항목1", "항목2", ...};
+JComboBox Cb = new JComboBox(String [] DataList);
+// DataList : 항목들의 이름이 저장되어 있는 배열 이름
+
