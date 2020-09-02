@@ -31,4 +31,6 @@ public class 클래스명 extends JFrame Implements MouseListener {
 }
 
 
+2. 키보드 이벤트 : KeyListener
+
 
