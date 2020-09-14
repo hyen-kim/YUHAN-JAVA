@@ -7,6 +7,29 @@ import javax.swing.JFrame;
 
 public class Key2 extends JFrame implements KeyListener {
 	
+	JButton btn;
+	int curW = 70, curH = 30;
+	// 기본 생성자
+	public Key2() {
+		setTitle("움직이는 버튼 (방향키)");
+		setLayout(null); 	// 배치관리자를 null 둠
+		
+		// 버튼에 대한 설정
+		btn = new JButton("Move");
+		btn.setBounds(50, 50, curW, curH);
+		add(btn);
+		
+		addKeyListener(this);		// 현재 객체의 처리자를 의미하는 this 사용
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setBounds(600, 300, 500, 300);
+		setVisible(true);
+		
+		requestFocus(); 	// 메소드 포커스를 맞춤
+	}
+	
+	
+	
 	// KeyListener가 처리하는 리스너들
 	@Override
 	public void keyPressed(KeyEvent e) {
@@ -40,6 +63,18 @@ public class Key2 extends JFrame implements KeyListener {
 		case KeyEvent.VK_F2:
 			btn.setBackground(Color.ORANGE);
 			break;
+			
+		case KeyEvent.VK_F10:
+			btn.setSize(curW + 5, curH + 5);
+			curW += 5;
+			curH += 5;
+			break;
+		
+		case KeyEvent.VK_F11:
+			btn.setSize(curW - 5, curH - 5);
+			curW -= 5;
+			curH -= 5;
+			break;
 		}
 	}
 
@@ -54,28 +89,6 @@ public class Key2 extends JFrame implements KeyListener {
 		// TODO Auto-generated method stub
 
 	}
-	
-	
-	JButton btn;
-	// 기본 생성자
-	public Key2() {
-		setTitle("움직이는 버튼 (방향키)");
-		setLayout(null); 	// 배치관리자를 null 둠
-		
-		// 버튼에 대한 설정
-		btn = new JButton("Move");
-		btn.setBounds(50, 50, 70, 30);
-		add(btn);
-		
-		addKeyListener(this);		// 현재 객체의 처리자를 의미하는 this 사용
-		
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setBounds(600, 300, 500, 300);
-		setVisible(true);
-		
-		requestFocus(); 	// 메소드 포커스를 맞춤
-	}
-	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
