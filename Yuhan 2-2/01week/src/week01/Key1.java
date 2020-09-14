@@ -32,7 +32,7 @@ public class Key1 extends JFrame implements KeyListener {
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-		lbl.setText("눌렀던 [문자]키를 해제하는 순간입니다. => " + e.getKeyChar()));
+		lbl.setText("눌렀던 [문자]키를 해제하는 순간입니다. => " + e.getKeyChar());
 	}
 
 	public static void main(String[] args) {
